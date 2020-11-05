@@ -1,0 +1,69 @@
+---
+
+- name: homebrew taps
+  command: brew tap {{ item }}
+  loop: '{{ homebrew_taps }}'
+  tags:
+  - brew
+
+- name: Uninstall old homebrew packages
+  homebrew:
+    name: '{{ item }}'
+    state: absent
+  with_items: '{{ homebrew_package_removals }}'
+  tags:
+  - brew
+
+
+- name: Update homebrew
+  homebrew:
+    name: git
+    state: latest
+    update_homebrew: true
+  tags:
+  - brew
+
+- name: Uninstall old homebrew packages
+  homebrew:
+    name: '{{ item }}'
+    state: absent
+  with_items: '{{ homebrew_package_removals }}'
+  tags:
+  - brew
+
+- name: Install homebrew packages
+  homebrew:
+    name: '{{ item }}'
+    state: latest
+  loop: '{{ homebrew_packages }}'
+  tags:
+  - brew
+
+- name: Install homebrew cask packages
+  homebrew_cask:
+    name: '{{ item }}'
+    state: installed
+  loop: '{{ homebrew_cask_packages }}'
+  tags:
+  - brew
+
+#- name: homebrew cleanup
+#  command: brew cleanup
+
+- name: Synchronize macbook shoes directory with rsync
+  synchronize:
+    src: /Users/ripvanpringle/Documents/00_macbook_shoes
+    dest: /Users/firuzdumlupinar/Documents/00_macbook_shoes
+    checksum: yes
+
+- name: Synchronize 01_Docs directory with rsync
+  synchronize:
+    src: /Users/ripvanpringle/Documents/01_Docs
+    dest: /Users/firuzdumlupinar/Documents/01_Docs
+    checksum: yes
+
+- name: Copy iterm2 configuration file
+  copy:
+    src: /Users/ripvanpringle/Library/Preferences/com.googlecode.iterm2.plist
+    dest: /Users/firuzdumlupinar/Library/Preferences/com.googlecode.iterm2.plist
+    owner: firuzdumlupinar

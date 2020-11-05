@@ -1,0 +1,34 @@
+homebrew_taps: []
+
+homebrew_package_removals: []
+
+homebrew_packages:
+- git
+- jq
+- openssl
+- pyenv
+- pypy
+- python
+- tree
+- wget
+- zsh-completions
+- docker-compose
+
+homebrew_cask_packages:
+- docker
+- firefox
+- google-chrome
+- iterm2
+- skype
+- sublime-text
+- vagrant
+- virtualbox
+- pycharm
+- microsoft-office
+- adobe-acrobat-reader
+- amazon-music
+- avg-antivirus
+- vmware-fusion
+- zoomus
+- wireshark
+- slack

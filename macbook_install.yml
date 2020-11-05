@@ -1,0 +1,6 @@
+---
+- name: macbook provisioner
+  hosts: macbook
+  gather_facts: False
+  roles:
+    - setup_apps
