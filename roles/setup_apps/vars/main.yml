@@ -33,3 +33,4 @@ homebrew_cask_packages:
 - wireshark
 - slack
 - intellij-idea
+- postman
