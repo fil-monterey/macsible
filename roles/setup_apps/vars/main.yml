@@ -32,3 +32,4 @@ homebrew_cask_packages:
 - zoomus
 - wireshark
 - slack
+- intellij-idea
