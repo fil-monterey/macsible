@@ -34,3 +34,4 @@ homebrew_cask_packages:
 - slack
 - intellij-idea
 - postman
+- kafka
