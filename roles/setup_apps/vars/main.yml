@@ -13,13 +13,16 @@ homebrew_packages:
 - wget
 - zsh-completions
 - docker-compose
+- tmux
+- awscli
+- kubectl
+- kafka
 
 homebrew_cask_packages:
 - docker
 - firefox
 - google-chrome
 - iterm2
-- skype
 - sublime-text
 - vagrant
 - virtualbox
@@ -34,4 +37,3 @@ homebrew_cask_packages:
 - slack
 - intellij-idea
 - postman
-- kafka
