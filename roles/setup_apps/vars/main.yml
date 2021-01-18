@@ -17,6 +17,7 @@ homebrew_packages:
 - awscli
 - kubectl
 - kafka
+- aws-iam-authenticator
 
 homebrew_cask_packages:
 - docker
