@@ -8,7 +8,6 @@ homebrew_packages:
 - openssl
 - pyenv
 - pypy
-- python3
 - tree
 - nmap
 - wget
