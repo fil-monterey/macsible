@@ -8,8 +8,9 @@ homebrew_packages:
 - openssl
 - pyenv
 - pypy
-- python
+- python3
 - tree
+- nmap
 - wget
 - zsh-completions
 - docker-compose
