@@ -28,7 +28,7 @@ homebrew_cask_packages:
 - sublime-text
 - vagrant
 - virtualbox
-- pycharm
+- pycharm-ce
 - microsoft-office
 - adobe-acrobat-reader
 - amazon-music
